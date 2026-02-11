@@ -2,13 +2,13 @@ import streamlit as st
 import re
 
 # Configuração da página
-st.set_page_config(page_title="Network Config Generator Pro", page_icon="🌐", layout="wide")
+st.set_page_config(page_title="Network Config Generator", page_icon="🌐", layout="wide")
 
 def validate_ip(ip):
     pattern = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
     return pattern.match(ip)
 
-st.title("🌐 Network Configuration Generator PRO")
+st.title("🌐 Network Configuration Generator")
 st.markdown("---")
 
 # --- SIDEBAR: CONFIGURAÇÕES GERAIS ---
@@ -19,7 +19,7 @@ with st.sidebar:
     domain_name = st.text_input("Domain Name", "empresa.local")
     
     st.subheader("🛡️ Segurança de Acesso")
-    banner = st.text_area("MOTD Banner", "ACESSO RESTRITO! Todos os acessos sao monitorizados.")
+    banner = st.text_area("MOTD Banner", "************************************************ACESSO RESTRITO!*******************************************")
     ssh_version = st.selectbox("Versão SSH", ["2", "1.99"])
 
 # --- ÁREA PRINCIPAL: ABAS POR CATEGORIA ---
