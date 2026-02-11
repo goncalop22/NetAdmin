@@ -106,7 +106,7 @@ write memory
 st.divider()
 st.subheader("🛡️ Verificação de Segurança (Audit)")
 if not enable_secret:
-    st.error("❌ Erro: Definir um 'Enable Secret' é obrigatório para um ambiente profissional.")
+    st.error("❌ Erro: Definir uma 'Enable Secret' é obrigatório para um ambiente profissional.")
 elif len(enable_secret) < 8:
     st.warning("⚠️ Aviso: A password de enable deve ter pelo menos 8 caracteres.")
 else:
